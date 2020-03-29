@@ -31,7 +31,7 @@ public final static class Interpreteur {
 			try {
 				commands.get(sof).apply();
 			} catch (Exception e) {
-				System.err.println("erreur de saissie");
+				System.err.println("erreur de saisie");
 			}
 		} else {
 			throw new Exception();
@@ -41,7 +41,7 @@ public final static class Interpreteur {
 	public static  Interpreteur init(final Undo u) {
 		Interpreteur h = new Interpreteur();
 		h.addCommand("undo", u);
-		h.addCommand("quit", new Quit());
+		h.addCommand("exit", new Quit());
 		return h;
 	}
 }
