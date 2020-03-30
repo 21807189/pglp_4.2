@@ -21,8 +21,7 @@ public final static class Interpreteur {
 		commands = new HashMap<String, Interpreteurgeneric>();
 	}
 	
-	public void addCommand(final String sof,
-	final Interpreteurgeneric command) {
+	public void addCommand(final String sof,final Interpreteurgeneric command) {
 		this.commands.put(sof, command);
 	}
 	

@@ -14,24 +14,30 @@ import interpreteur.Undo;
 
 public class saisieRPN {
  
-	private MoteurRpn moteur;
+	MoteurRpn moteur;
 	
 	private Interpreteur interprete;
 	 
 	private Stack<Double> pile;
 	 
 	private Scanner s;
+
+	public Object moteurRpn;
 	 
 	public saisieRPN() {
 		pile = new Stack<Double>();
 		Undo u = new Undo(pile);
-		Quit q= new Quit();
+		//Quit q= new Quit();
 		u.alertChange();
 		moteur = MoteurRpn.init(pile, u);
 		interprete = Interpreteur.init(u);
+		
 	}
-	
-	public double calcul() throws Exception {
+	public Object getStack() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public double calcul(String g) throws Exception {
 		s = new Scanner(System.in);
 		double d;
 		boolean continuer = true;

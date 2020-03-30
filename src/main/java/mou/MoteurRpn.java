@@ -29,7 +29,6 @@ public final class MoteurRpn {
 	}
 	 
 	
-	
 	public void addOperande(final double d) {
 		pile.push(d);
 		undo.alertChange();
@@ -70,4 +69,18 @@ public final class MoteurRpn {
 		HOU.addCommand("/", new Division());
 		return HOU;
 	}
+
+
+
+		public Object getStack() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+
+
+		/*public Object getStack() {
+			// TODO Auto-generated method stub
+			return null;
+		}*/
 }
